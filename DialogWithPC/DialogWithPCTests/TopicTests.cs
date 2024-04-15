@@ -26,5 +26,14 @@ namespace DialogWithPCTests
             string actualTopic = dilaogTopic.GetTopic();
             Assert.AreEqual(topic, actualTopic);
         }
+        [TestMethod]
+        public void Topic_GetPhrases_Test()
+        {
+            List<Phrases> phrases = new List<Phrases> { new Phrases("Здорово, что ты бывал в Париже!", "Жаль, что ты не был в Париже(") };
+            Topic dilaogTopic = new Topic("", phrases);
+            Phrases expectedPhrase = new Phrases("Здорово, что ты бывал в Париже!", "Жаль, что ты не был в Париже(");
+            Phrases actualPhrase = dilaogTopic.GetPhrases();
+            Assert.AreEqual(expectedPhrase,actualPhrase);
+        }
     }
 }
