@@ -31,9 +31,8 @@ namespace DialogWithPCTests
         {
             List<Phrases> phrases = new List<Phrases> { new Phrases("Здорово, что ты бывал в Париже!", "Жаль, что ты не был в Париже(") };
             Topic dilaogTopic = new Topic("", phrases);
-            Phrases expectedPhrase = new Phrases("Здорово, что ты бывал в Париже!", "Жаль, что ты не был в Париже(");
-            Phrases actualPhrase = dilaogTopic.GetPhrases();
-            Assert.AreEqual(expectedPhrase,actualPhrase);
+            List<Phrases> actualPhrases = dilaogTopic.GetPhrases();
+            Assert.AreEqual(phrases,actualPhrases);
         }
     }
 }
