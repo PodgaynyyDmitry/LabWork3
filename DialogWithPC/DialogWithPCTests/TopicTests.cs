@@ -12,7 +12,9 @@ namespace DialogWithPCTests
         [TestMethod]
         public void Topic_ClassCreation_Test()
         {
-            Topic topic = new Topic("Путешествия",new List<Phrases>());
+            string topic = "Путешествия";
+            List<Phrases> phrases = new List<Phrases>();
+            Topic dilaogTopic = new Topic(topic,phrases);
             Assert.IsNotNull(topic);
         }
     }
