@@ -1,4 +1,5 @@
-﻿namespace DialogWithPCTests
+﻿
+namespace DialogWithPCTests
 {
     public class Phrases
     {
@@ -9,6 +10,11 @@
         {
             this.positivePhrase = v1;
             this.negativePhrase = v2;
+        }
+
+        public string GetPositivePhrase()
+        {
+            return positivePhrase;
         }
     }
 }
