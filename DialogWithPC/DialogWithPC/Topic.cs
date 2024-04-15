@@ -1,4 +1,5 @@
 ﻿
+
 namespace DialogWithPCTests
 {
     public class Topic
@@ -10,6 +11,11 @@ namespace DialogWithPCTests
         {
             this.topic = topic;
             this.phrases = phrases;
+        }
+
+        public string GetTopic()
+        {
+            return topic;
         }
     }
 }
