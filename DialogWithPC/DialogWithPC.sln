@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogWithPC", "DialogWithPC\DialogWithPC.csproj", "{841F926D-F234-43AE-AC6A-0E24E0788893}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogWithPCTests", "DialogWithPCTests\DialogWithPCTests.csproj", "{F91BC26F-3878-420A-9470-1C11B891258E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{841F926D-F234-43AE-AC6A-0E24E0788893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{841F926D-F234-43AE-AC6A-0E24E0788893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{841F926D-F234-43AE-AC6A-0E24E0788893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{841F926D-F234-43AE-AC6A-0E24E0788893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F91BC26F-3878-420A-9470-1C11B891258E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F91BC26F-3878-420A-9470-1C11B891258E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F91BC26F-3878-420A-9470-1C11B891258E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F91BC26F-3878-420A-9470-1C11B891258E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2BB01D7C-0E87-41BB-93A9-692CAFA9B81C}
+	EndGlobalSection
+EndGlobal
