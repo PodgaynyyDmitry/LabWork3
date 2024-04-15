@@ -9,5 +9,13 @@ namespace DialogWithPCTests
             Phrases phrases = new Phrases("«дорово, что ты бывал в ѕариже!","∆аль, что ты не был в ѕариже(");
             Assert.IsNotNull(phrases);
         }
+        [TestMethod]
+        public void Phrases_GetPositivePhrase_Test()
+        {
+            Phrases phrases = new Phrases("«дорово, что ты бывал в ѕариже!", "∆аль, что ты не был в ѕариже(");
+            string expectedPhrase = "«дорово, что ты бывал в ѕариже!";
+            string actualPhrase = phrases.GetPositivePhrase();
+            Assert.AreEqual(expectedPhrase, actualPhrase);
+        }
     }
 }
