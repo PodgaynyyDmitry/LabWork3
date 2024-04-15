@@ -17,6 +17,7 @@ namespace DialogWithPCTests
             string actualPhrase = phrases.GetPositivePhrase();
             Assert.AreEqual(expectedPhrase, actualPhrase);
         }
+        [TestMethod]
         public void Phrases_GetNegativePhrase_Test()
         {
             Phrases phrases = new Phrases("«дорово, что ты бывал в ѕариже!", "∆аль, что ты не был в ѕариже(");
