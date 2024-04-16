@@ -57,5 +57,12 @@ namespace DialogWithPCTests
             bool isAnswerPositive = answerHandler.CheckAnswerPositivity("нет желания");
             Assert.IsFalse(isAnswerPositive);
         }
+        [TestMethod]
+        public void CheckAnswerEmpty_Test()
+        {
+            AnswerHandler answerHandler = new AnswerHandler();
+            bool isAnswerEmpty = answerHandler.CheckAnswerEmpty("ответ");
+            Assert.IsFalse(isAnswerEmpty);
+        }
     }
 }

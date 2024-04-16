@@ -7,6 +7,7 @@ namespace DialogWithPCTests
     {
         private string[] finishDialogPhrases = {"Я хочу завершить диалог","Я хочу закончить беседу","Я наговорился","Мне надоело"};
         private string[] negativeAnswerPhrases = {"не ","нет","к сожалению" };
+
         public bool CheckAnswerPositivity(string v)
         {
             foreach(string phrase in negativeAnswerPhrases)
