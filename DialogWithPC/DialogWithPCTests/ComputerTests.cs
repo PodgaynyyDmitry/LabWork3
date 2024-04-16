@@ -88,5 +88,17 @@ namespace DialogWithPCTests
             Assert.AreEqual("Надеюсь, ты еще посетишь Париж)", computer.SayPhrase("нет"));
 
         }
+        [TestMethod]
+        public void SayPhrase_NextPhrase_Test()
+        {
+            Computer computer = new Computer();
+            List<Topic> topics = new List<Topic> { new Topic("Путешествия", new List<Phrases> { new Phrases ("Бывал ли ты в Париже?",""),
+                new Phrases("Здорово! Что тебе больше всего там понравилось?","Надеюсь, ты еще посетишь Париж)") })};
+            computer.SetTopic(topics.First());
+            computer.SetCurrentPhrase(topics.First().GetPhrases()[0]);
+            computer.SayPhrase("");
+            Assert.AreEqual("Надеюсь, ты еще посетишь Париж)", computer.SayPhrase("нет"));
+
+        }
     }
 }
