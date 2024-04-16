@@ -25,6 +25,8 @@ namespace DialogWithPCTests
                 return Status.EMPTY_ANSWER;
             if (answerHandler.CheckDialogFinishStatus(v))
                 return Status.DIALOG_FINISH;
+            if(answerHandler.CheckTopicChangeStatus(v))
+                return Status.TOPIC_CHANGE;
             return Status.NORMAL_WORK;
         }
 
