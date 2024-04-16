@@ -1,6 +1,11 @@
-﻿namespace DialogWithPCTests
+﻿
+namespace DialogWithPCTests
 {
     public class AnswerHandler
     {
+        public bool CheckDialogFinishStatus(string v)
+        {
+            return true;
+        }
     }
 }
