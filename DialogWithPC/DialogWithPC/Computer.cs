@@ -25,7 +25,11 @@ namespace DialogWithPCTests
             foreach(Topic topic in topics)
             {
                 if(v==topic.GetTopic())
+                {
                     result = topic.GetTopic();
+                    currentTopic = topic;
+                }
+                    
             }
             return result;
         }
@@ -45,6 +49,7 @@ namespace DialogWithPCTests
         {
             this.currentTopic = topic;
         }
+        public Topic GetTopic() { return currentTopic; }
         public void SetCurrentPhrase(Phrases phrase)
         {
 

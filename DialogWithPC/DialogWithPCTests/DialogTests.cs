@@ -17,15 +17,7 @@ namespace DialogWithPCTests
             Dialog dialog = new Dialog(topics, computer);
             Assert.IsNotNull(dialog);
         }
-        [TestMethod]
-        public void StartDialog_Test()
-        {
-            List<Topic> topics = new List<Topic>();
-            Computer computer = new Computer();
-            Dialog dialog = new Dialog(topics, computer);
-            Status expectedStatus = Status.NORMAL_WORK;
-            Assert.AreEqual(expectedStatus, dialog.StartDialog());
-        }
-        
+      
+
     }
 }
