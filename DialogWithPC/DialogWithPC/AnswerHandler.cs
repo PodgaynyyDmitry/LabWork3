@@ -1,12 +1,18 @@
 ﻿
 
 
+
 namespace DialogWithPCTests
 {
     public class AnswerHandler
     {
         private string[] finishDialogPhrases = {"Я хочу завершить диалог","Я хочу закончить беседу","Я наговорился","Мне надоело"};
         private string[] negativeAnswerPhrases = {"не ","нет","к сожалению" };
+
+        public bool CheckAnswerEmpty(string v)
+        {
+            return false;
+        }
 
         public bool CheckAnswerPositivity(string v)
         {
