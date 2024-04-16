@@ -23,6 +23,8 @@ namespace DialogWithPCTests
         {
             if (answerHandler.CheckAnswerEmpty(v))
                 return Status.EMPTY_ANSWER;
+            if (answerHandler.CheckDialogFinishStatus(v))
+                return Status.DIALOG_FINISH;
             return Status.NORMAL_WORK;
         }
 
