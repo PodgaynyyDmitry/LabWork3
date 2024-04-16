@@ -40,5 +40,13 @@ namespace DialogWithPCTests
             Status actualProcessingStatus = computer.ProcessUserAnswer("Я хочу завершить диалог");
             Assert.AreEqual(expectedProcessingStatus, actualProcessingStatus);
         }
+        [TestMethod]
+        public void ProcessUseranswer_ChangeTopic_Test()
+        {
+            Computer computer = new Computer();
+            Status expectedProcessingStatus = Status.TOPIC_CHANGE;
+            Status actualProcessingStatus = computer.ProcessUserAnswer("Я хочу поговорить на другую тему");
+            Assert.AreEqual(expectedProcessingStatus, actualProcessingStatus);
+        }
     }
 }
