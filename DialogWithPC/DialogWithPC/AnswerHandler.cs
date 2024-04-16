@@ -17,6 +17,8 @@ namespace DialogWithPCTests
 
         public bool CheckTopicChangeStatus(string v)
         {
+            if(v=="Я хочу поговорить на другую тему")
+                return true;
             return false;
         }
     }
