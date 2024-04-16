@@ -51,9 +51,12 @@ namespace DialogWithPCTests
             currentPhrase = phrase;
         }
 
-        public string? SayPhrase()
+        public string? SayPhrase(string answer)
         {
-            return currentPhrase.GetPositivePhrase();
+            if(answerHandler.CheckAnswerPositivity(answer))
+                return currentPhrase.GetPositivePhrase();
+            else 
+                return currentPhrase.GetNegativePhrase();
         }
     }
 }
