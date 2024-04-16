@@ -45,10 +45,10 @@ namespace DialogWithPCTests
         {
             this.currentTopic = topic;
         }
-        public void SetCurrentPhrase()
+        public void SetCurrentPhrase(Phrases phrase)
         {
-            if (currentTopic.GetPhrases()[0] != null)
-                currentPhrase = currentTopic.GetPhrases()[0];
+
+            currentPhrase = phrase;
         }
 
         public string? SayPhrase()
