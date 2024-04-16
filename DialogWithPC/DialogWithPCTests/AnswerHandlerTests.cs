@@ -15,5 +15,12 @@ namespace DialogWithPCTests
             AnswerHandler answerHandler = new AnswerHandler();
             Assert.IsNotNull(answerHandler);
         }
+        [TestMethod]
+        public void AnswerHandler_CheckDialogFinishStatus_Test()
+        {
+            AnswerHandler answerHandler = new AnswerHandler();
+            bool isDialogFinished = answerHandler.CheckDialogFinishStatus("ответ");
+            Assert.IsTrue(isDialogFinished);
+        }
     }
 }
