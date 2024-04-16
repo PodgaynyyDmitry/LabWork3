@@ -21,6 +21,8 @@ namespace DialogWithPCTests
 
         public Status ProcessUserAnswer(string v)
         {
+            if (answerHandler.CheckAnswerEmpty(v))
+                return Status.EMPTY_ANSWER;
             return Status.NORMAL_WORK;
         }
 
