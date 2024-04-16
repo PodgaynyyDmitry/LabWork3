@@ -6,9 +6,14 @@ namespace DialogWithPCTests
     public class AnswerHandler
     {
         private string[] finishDialogPhrases = {"Я хочу завершить диалог","Я хочу закончить беседу","Я наговорился","Мне надоело"};
-
+        private string[] negativeAnswerPhrases = {"не ","нет","к сожалению" };
         public bool CheckAnswerPositivity(string v)
         {
+            foreach(string phrase in negativeAnswerPhrases)
+            {
+                if (v.Contains(phrase))
+                    return false;
+            }
             return true;
         }
 
