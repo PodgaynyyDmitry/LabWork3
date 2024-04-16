@@ -13,13 +13,11 @@ namespace DialogWithPCTests
     {
         private Topic currentTopic;
         private AnswerHandler answerHandler;
-        private string currentPhrase;
-
+        private Phrases currentPhrase;
         public Computer()
         {
             this.answerHandler = new AnswerHandler();
         }
-
         public string ChooseTopic(List<Topic> topics, string v)
         {
             string result = "";
@@ -45,6 +43,11 @@ namespace DialogWithPCTests
         public void SetTopic(Topic topic)
         {
             this.currentTopic = topic;
+        }
+        public void SetCurrentPhrase()
+        {
+            if (currentTopic.GetPhrases()[0] != null)
+                currentPhrase = currentTopic.GetPhrases()[0];
         }
     }
 }
