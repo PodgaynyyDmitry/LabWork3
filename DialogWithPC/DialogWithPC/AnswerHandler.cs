@@ -11,6 +11,8 @@ namespace DialogWithPCTests
 
         public bool CheckAnswerEmpty(string v)
         {
+            if (v == "")
+                return true;
             return false;
         }
 
