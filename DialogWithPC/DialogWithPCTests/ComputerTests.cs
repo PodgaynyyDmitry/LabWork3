@@ -57,5 +57,14 @@ namespace DialogWithPCTests
             string actualTopic = computer.ChooseTopic(topics,"Альпинизм");
             Assert.AreEqual(expectedTopic, actualTopic);
         }
+        [TestMethod]
+        public void ChooseTopic_NoSuchTopic_Test()
+        {
+            Computer computer = new Computer();
+            List<Topic> topics = new List<Topic> { new Topic("Путешествия", new List<Phrases>()), new Topic("Альпинизм", new List<Phrases>()) };
+            string expectedTopic = "";
+            string actualTopic = computer.ChooseTopic(topics, "Рыбалка");
+            Assert.AreEqual(expectedTopic, actualTopic);
+        }
     }
 }
