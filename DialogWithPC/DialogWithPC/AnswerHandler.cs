@@ -1,4 +1,5 @@
 ﻿
+
 namespace DialogWithPCTests
 {
     public class AnswerHandler
@@ -11,6 +12,11 @@ namespace DialogWithPCTests
                 if (phrase == v)
                     return true;
             }
+            return false;
+        }
+
+        public bool CheckTopicChangeStatus(string v)
+        {
             return false;
         }
     }
