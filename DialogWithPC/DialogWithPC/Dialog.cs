@@ -1,4 +1,5 @@
 ﻿
+
 namespace DialogWithPCTests
 {
     public class Dialog
@@ -10,6 +11,11 @@ namespace DialogWithPCTests
         {
             this.topics = topics;
             this.computer = computer;
+        }
+
+        public Status StartDialog()
+        {
+            return Status.NORMAL_WORK;
         }
     }
 }
