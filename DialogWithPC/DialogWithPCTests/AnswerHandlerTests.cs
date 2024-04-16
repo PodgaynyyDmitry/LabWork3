@@ -64,5 +64,12 @@ namespace DialogWithPCTests
             bool isAnswerEmpty = answerHandler.CheckAnswerEmpty("ответ");
             Assert.IsFalse(isAnswerEmpty);
         }
+        [TestMethod]
+        public void CheckAnswerEmpty_True_Test()
+        {
+            AnswerHandler answerHandler = new AnswerHandler();
+            bool isAnswerEmpty = answerHandler.CheckAnswerEmpty("");
+            Assert.IsTrue(isAnswerEmpty);
+        }
     }
 }
