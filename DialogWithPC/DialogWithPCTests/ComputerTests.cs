@@ -54,7 +54,7 @@ namespace DialogWithPCTests
             Computer computer = new Computer();
             List<Topic> topics = new List<Topic> { new Topic("Путешествия",new List<Phrases>()), new Topic("Альпинизм", new List<Phrases>())};
             string expectedTopic = "Альпинизм";
-            string actualTopic = computer.ChooseTopic("Альпинизм");
+            string actualTopic = computer.ChooseTopic(topics,"Альпинизм");
             Assert.AreEqual(expectedTopic, actualTopic);
         }
     }

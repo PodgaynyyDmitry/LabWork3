@@ -1,4 +1,5 @@
 ﻿
+
 namespace DialogWithPCTests
 {
     public enum Status
@@ -17,6 +18,17 @@ namespace DialogWithPCTests
         public Computer()
         {
             this.answerHandler = new AnswerHandler();
+        }
+
+        public string ChooseTopic(List<Topic> topics, string v)
+        {
+            string result = "";
+            foreach(Topic topic in topics)
+            {
+                if(v==topic.GetTopic())
+                    result = topic.GetTopic();
+            }
+            return result;
         }
 
         public Status ProcessUserAnswer(string v)
