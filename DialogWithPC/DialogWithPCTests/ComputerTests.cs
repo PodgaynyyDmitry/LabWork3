@@ -48,5 +48,14 @@ namespace DialogWithPCTests
             Status actualProcessingStatus = computer.ProcessUserAnswer("Я хочу поговорить на другую тему");
             Assert.AreEqual(expectedProcessingStatus, actualProcessingStatus);
         }
+        [TestMethod]
+        public void ChooseTopic_Test()
+        {
+            Computer computer = new Computer();
+            List<Topic> topics = new List<Topic> { new Topic("Путешествия",new List<Phrases>()), new Topic("Альпинизм", new List<Phrases>())};
+            string expectedTopic = "Альпинизм";
+            string actualTopic = computer.ChooseTopic("Альпинизм");
+            Assert.AreEqual(expectedTopic, actualTopic);
+        }
     }
 }
