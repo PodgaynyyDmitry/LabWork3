@@ -11,4 +11,11 @@ new Phrases("Круто!","Жаль(")};
 List<Topic> topics = new List<Topic> { new Topic("Путешествия",phrases), new Topic("Рыбалка", fishing)};
 Computer computer = new Computer();
 Dialog dialog = new Dialog(topics,computer);
+Console.ForegroundColor = ConsoleColor.Red;
+Console.WriteLine("Если вы хотите поменять тему беседы, скажите фразу:");
+Console.WriteLine("Я хочу поговорить на другую тему");
+Console.WriteLine("Если вы хотите завершить беседу, скажите фразу:");
+Console.WriteLine("Я хочу закончить беседу");
+Console.ForegroundColor = ConsoleColor.White;
+
 dialog.StartDialog();

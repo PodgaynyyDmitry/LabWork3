@@ -20,7 +20,6 @@ namespace DialogWithPCTests
         {
             this.topics = topics;
             this.computer = computer;
-           // this.processingStatus = DialogStatus.TOPIC_CHANGE;
             this.stat = Status.TOPIC_CHANGE;
         }
 
@@ -34,7 +33,6 @@ namespace DialogWithPCTests
             string userAnswer = Console.ReadLine();   
             if(computer.ChooseTopic(topics, userAnswer)=="")
             {
-               
                 Console.WriteLine("К сожалению, я не знаю такую тему!");
                 return DialogStatus.NO_SUCH_TOPIC;
             }
@@ -52,7 +50,6 @@ namespace DialogWithPCTests
                 stat=computer.ProcessUserAnswer(userAnswer);
                 if(stat==Status.TOPIC_CHANGE)
                 {
-                    
                     Console.WriteLine("На какую тему ты хотел бы поговорить?");
                     res = "";
                     foreach (Topic topic in topics) { res += topic.GetTopic() + " "; }
@@ -61,7 +58,6 @@ namespace DialogWithPCTests
                     userAnswer = Console.ReadLine();
                     if (computer.ChooseTopic(topics, userAnswer) == "")
                     {
-                        
                         Console.WriteLine("К сожалению, я не знаю такую тему!");
                         return DialogStatus.NO_SUCH_TOPIC;
                     }
