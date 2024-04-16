@@ -16,6 +16,13 @@ namespace DialogWithPCTests
             Computer computer = new Computer();
             Assert.IsNotNull(computer);
         }
-      
+        [TestMethod]
+        public void ProcessUseranswer_Test()
+        {
+            Computer computer = new Computer();
+            Status expectedProcessingStatus = Status.NORMAL_WORK;
+            Status actualProcessingStatus = computer.ProcessUserAnswer("ответ");
+            Assert.AreEqual(expectedProcessingStatus, actualProcessingStatus);
+        }
     }
 }
