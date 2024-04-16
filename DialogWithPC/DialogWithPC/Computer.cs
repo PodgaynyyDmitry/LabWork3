@@ -1,5 +1,6 @@
 ﻿
 
+
 namespace DialogWithPCTests
 {
     public enum Status
@@ -48,6 +49,11 @@ namespace DialogWithPCTests
         {
             if (currentTopic.GetPhrases()[0] != null)
                 currentPhrase = currentTopic.GetPhrases()[0];
+        }
+
+        public string? SayPhrase()
+        {
+            return currentPhrase.GetPositivePhrase();
         }
     }
 }
