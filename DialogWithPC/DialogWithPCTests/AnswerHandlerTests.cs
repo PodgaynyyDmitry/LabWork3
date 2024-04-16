@@ -29,5 +29,12 @@ namespace DialogWithPCTests
             bool isDialogFinished = answerHandler.CheckDialogFinishStatus("Я хочу завершить диалог");
             Assert.IsTrue(isDialogFinished);
         }
+        [TestMethod]
+        public void CheckTopicChangeStatus_Test()
+        {
+            AnswerHandler answerHandler = new AnswerHandler();
+            bool isTopicNeedChange = answerHandler.CheckTopicChangeStatus("Ответ");
+            Assert.IsFalse(isTopicNeedChange);
+        }
     }
 }
