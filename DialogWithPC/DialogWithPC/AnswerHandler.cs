@@ -5,7 +5,7 @@ namespace DialogWithPCTests
     {
         public bool CheckDialogFinishStatus(string v)
         {
-            return true;
+            return false;
         }
     }
 }

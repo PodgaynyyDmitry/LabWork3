@@ -20,6 +20,13 @@ namespace DialogWithPCTests
         {
             AnswerHandler answerHandler = new AnswerHandler();
             bool isDialogFinished = answerHandler.CheckDialogFinishStatus("ответ");
+            Assert.IsFalse(isDialogFinished);
+        }
+        [TestMethod]
+        public void AnswerHandler_CheckDialogFinishStatus_True_Test()
+        {
+            AnswerHandler answerHandler = new AnswerHandler();
+            bool isDialogFinished = answerHandler.CheckDialogFinishStatus("Я хочу завершить диалог");
             Assert.IsTrue(isDialogFinished);
         }
     }
