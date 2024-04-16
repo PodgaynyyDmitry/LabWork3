@@ -36,5 +36,12 @@ namespace DialogWithPCTests
             bool isTopicNeedChange = answerHandler.CheckTopicChangeStatus("Ответ");
             Assert.IsFalse(isTopicNeedChange);
         }
+        [TestMethod]
+        public void CheckTopicChangeStatus_True_Test()
+        {
+            AnswerHandler answerHandler = new AnswerHandler();
+            bool isTopicNeedChange = answerHandler.CheckTopicChangeStatus("Я хочу поговорить на другую тему");
+            Assert.IsTrue(isTopicNeedChange);
+        }
     }
 }
