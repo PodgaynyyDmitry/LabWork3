@@ -53,10 +53,20 @@ namespace DialogWithPCTests
 
         public string? SayPhrase(string answer)
         {
+            string result = "";
             if(answerHandler.CheckAnswerPositivity(answer))
-                return currentPhrase.GetPositivePhrase();
-            else 
-                return currentPhrase.GetNegativePhrase();
+                result=currentPhrase.GetPositivePhrase();
+            else
+               result=currentPhrase.GetNegativePhrase();
+
+            if (currentTopic.GetPhrases().IndexOf(currentPhrase)< currentTopic.GetPhrases().Count-1)
+            {
+                currentPhrase = currentTopic.GetPhrases()[currentTopic.GetPhrases().IndexOf(currentPhrase) + 1];
+                return result;
+            }
+            else
+                return result + " На этом все)";
+               
         }
     }
 }

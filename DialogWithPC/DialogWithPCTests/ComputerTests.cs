@@ -85,7 +85,7 @@ namespace DialogWithPCTests
                 new Phrases("Здорово! Что тебе больше всего там понравилось?","Надеюсь, ты еще посетишь Париж)") })};
             computer.SetTopic(topics.First());
             computer.SetCurrentPhrase(topics.First().GetPhrases()[1]);
-            Assert.AreEqual("Надеюсь, ты еще посетишь Париж)", computer.SayPhrase("нет"));
+            Assert.AreEqual("Надеюсь, ты еще посетишь Париж) На этом все)", computer.SayPhrase("нет"));
 
         }
         [TestMethod]
@@ -96,8 +96,8 @@ namespace DialogWithPCTests
                 new Phrases("Здорово! Что тебе больше всего там понравилось?","Надеюсь, ты еще посетишь Париж)") })};
             computer.SetTopic(topics.First());
             computer.SetCurrentPhrase(topics.First().GetPhrases()[0]);
-            computer.SayPhrase("");
-            Assert.AreEqual("Надеюсь, ты еще посетишь Париж)", computer.SayPhrase("нет"));
+            computer.SayPhrase("заглушка");
+            Assert.AreEqual("Надеюсь, ты еще посетишь Париж) На этом все)", computer.SayPhrase("нет"));
 
         }
     }
