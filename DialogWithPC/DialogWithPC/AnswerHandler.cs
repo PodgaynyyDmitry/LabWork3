@@ -1,10 +1,17 @@
 ﻿
 
+
 namespace DialogWithPCTests
 {
     public class AnswerHandler
     {
         private string[] finishDialogPhrases = {"Я хочу завершить диалог","Я хочу закончить беседу","Я наговорился","Мне надоело"};
+
+        public bool CheckAnswerPositivity(string v)
+        {
+            return true;
+        }
+
         public bool CheckDialogFinishStatus(string v)
         {
             foreach (string phrase in finishDialogPhrases)

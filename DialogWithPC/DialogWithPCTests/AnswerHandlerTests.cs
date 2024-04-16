@@ -48,6 +48,13 @@ namespace DialogWithPCTests
         {
             AnswerHandler answerHandler = new AnswerHandler();
             bool isAnswerPositive = answerHandler.CheckAnswerPositivity("ответ");
+            Assert.IsTrue(isAnswerPositive);
+        }
+        [TestMethod]
+        public void CheckAnswerPositivity_True_Test()
+        {
+            AnswerHandler answerHandler = new AnswerHandler();
+            bool isAnswerPositive = answerHandler.CheckAnswerPositivity("нет желания");
             Assert.IsFalse(isAnswerPositive);
         }
     }
