@@ -24,5 +24,13 @@ namespace DialogWithPCTests
             Status actualProcessingStatus = computer.ProcessUserAnswer("ответ");
             Assert.AreEqual(expectedProcessingStatus, actualProcessingStatus);
         }
+        [TestMethod]
+        public void ProcessUseranswer_EmptyAnswer_Test()
+        {
+            Computer computer = new Computer();
+            Status expectedProcessingStatus = Status.EMPTY_ANSWER;
+            Status actualProcessingStatus = computer.ProcessUserAnswer("");
+            Assert.AreEqual(expectedProcessingStatus, actualProcessingStatus);
+        }
     }
 }
