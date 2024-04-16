@@ -10,5 +10,9 @@
         {
             this.answerHandler = new AnswerHandler();
         }
+        public void SetTopic(Topic topic)
+        {
+            this.currentTopic = topic;
+        }
     }
 }

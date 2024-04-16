@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DialogWithPCTests
 {
@@ -15,5 +16,6 @@ namespace DialogWithPCTests
             Computer computer = new Computer();
             Assert.IsNotNull(computer);
         }
+      
     }
 }
